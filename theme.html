@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/84f93afde3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    .le{
+        font-family: 'Montserrat', sans-serif;
+    }
+    .c1{
+               background-image: url(./img04.jpg);
+               background-size: 100% 100%;
+            }
+            .c2{
+               background-image: url(./img02.jpg);
+               background-size: 100% 100%;
+            }.c3{
+               background-image: url(./img01.jpg);
+               background-size: 100% 100%;
+            }.c4{
+               background-image: url(./img05.jpg);
+               background-size: 100% 100%;
+            }.c5{
+               background-image: url(./img10.jpg);
+               background-size: 100% 100%;
+            }
+            .slid{
+                position: relative;
+            }
+    </style>
+    <nav class="h-20 w-full relative  ">
+        <div class="h-[30px] w-28 ml-8   absolute top-[17px]">
+        <img class="h-[30px] w-[28]"src="./mt-logo.png">
+        </div>
+        <ul class="flex justify-between h-auto w-[37.7rem] tracking-[0.12rem] font-sans
+          items-center text-[14px]  font-light text-gray-700 absolute left-[43rem] top-[1.7rem] ">
+            <li>HOME</li>
+            <li>PRODUCTS</li>
+            <li>BLOG</li>
+            <li>PAGES <span class=" transition-all transition-transform -rotate-2"></span></li>
+            <li>ABOUT</li>
+            <li>CONTACT</li>
+        </ul>
+        <div class=" h-auto w-[9.7rem] absolute  text-[1.5rem]  font-extralight
+        items-center left-[83rem] top-[1.7rem] flex justify-between ">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-bag-shopping"></i>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        </nav>
+        <!-- <div class="h-[37rem] w-full border-2 border-black  imgd1">
+            <div class="h-[18.5rem] w-[29.5rem] border-2 border-black ml-[32.7rem] mt-[10rem] ">
+                <h3>FURNITURE DESIGENS IDEAS</h3>
+            </div>
+        </div> -->
+       
+        <div class="contan h-[40rem] w-[90%] border-2 border-black m-auto  overflow-hidden  ">
+            
+               <div class="h-[100%] w-[500%]  flex  slid">
+                
+                <div class="h-[100%] w-[100%]  c1">
+                    
+                 </div>
+                <div class="h-[100%] w-[100%] c2">
+                </div>
+                <div class="h-[100%] w-[100%] c3">
+                </div>
+                <div class="h-[100%] w-[100%] c4">
+                </div>
+                <div class="h-[100%] w-[100%] c5">
+                </div>
+               </div>
+               
+        </div>
+        <button class="h-10 w-20 bg-blue-300 text-white  ">left</button>
+               <button class="h-10 w-20 bg-blue-300 text-white ">reight</button>
+        <script>
+           var slid=document.querySelector('.slid')
+           var le=document.getElementsByTagName('button')[0]
+           var ri=document.getElementsByTagName('button')[1]
+           var index=0;
+           console.log(ri);
+           console.log(le);
+           ri.addEventListener('click',()=>{
+            if(index<4){
+                index++
+            }
+            else{
+                index=0
+            }
+            console.log(index);
+            slid.style.left=`${index*-100}%`
+         })
+         le.addEventListener('click',()=>{
+            if(index>0){
+    
+                index--
+            }
+            else{
+                index=4
+            }
+            console.log(index);
+                    
+            slid.style.left=`${index*-100}%`
+         })
+         
+        </script>
+   </body>
+</html>
+
